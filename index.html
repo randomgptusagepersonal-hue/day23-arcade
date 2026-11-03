@@ -576,7 +576,7 @@ function reveal(id) {
   if (p.secret) { revealPeace(p); return; }
   pDlg.classList.toggle('goldd', !!p.gold);
   pDlg.innerHTML = `<div class="dbar"><span>${p.gold ? 'GOLDEN PRIZE' : 'PRIZE COLLECTED'}</span></div>
-    <div class="dbody"><div class="prizeart" aria-hidden="true">${p.art}</div><h2 id="pH"></h2><p class="msg"></p>${p.gold ? '<p class="bday">Happy birthday month, Ammuuu. 🥹💜</p>' : ''}
+    <div class="dbody"><div class="prizeart" aria-hidden="true">${p.art}</div><h2 id="pH"></h2><p class="msg"></p>${p.gold ? '<p class="bday">Love You, Ammuuu. 🥹💜</p>' : ''}
     <div class="backrow"><button class="btn${p.gold ? '' : ' alt'}" type="button" id="pBack">${p.gold ? 'CONTINUE →' : '← BACK TO THE ARCADE'}</button></div></div>`;
   pDlg.querySelector('h2').textContent = p.title;
   pDlg.querySelector('.msg').textContent = p.msg;
