@@ -172,7 +172,7 @@ dialog[open]{animation:dlgin .22s steps(3)}
 #aDlg p+p{margin-top:5px}
 #peace{min-height:100vh;min-height:100dvh}
 .pbar{display:flex;align-items:center;min-height:50px;padding:5px 8px;background:var(--ink);box-shadow:0 3px 0 var(--lav)}
-#pBack{min-height:40px;padding:6px 10px 5px;border:0;background:var(--pale);color:var(--ink);font-size:20px;line-height:1;box-shadow:inset -2px -2px 0 var(--lav)}
+#peaceBack{min-height:40px;padding:6px 10px 5px;border:0;background:var(--pale);color:var(--ink);font-size:20px;line-height:1;box-shadow:inset -2px -2px 0 var(--lav)}
 .pwrap{width:100%;max-width:560px;margin:0 auto;padding:10px 12px 18px}
 #pStage{position:relative;height:186px;overflow:hidden;background:linear-gradient(#2A2146,#4A3A6B);box-shadow:0 0 0 3px var(--ink);transition:background .1s}
 #pStage::before{content:'';position:absolute;left:0;right:0;bottom:0;height:18px;background:#3A2C62}
@@ -314,7 +314,7 @@ dialog[open]{animation:dlgin .22s steps(3)}
 
 <!-- OPERATION: MAKE KANMANI LESS ANGRY -->
 <section class="screen" id="peace" hidden aria-label="Operation: Make Kanmani Less Angry">
-  <div class="pbar"><button id="pBack" type="button">← BACK TO THE ARCADE</button></div>
+  <div class="pbar"><button id="peaceBack" type="button">← BACK TO THE ARCADE</button></div>
   <div class="pwrap">
     <div id="pStage" aria-hidden="true">
       <span class="cloud c1"></span><span class="cloud c2"></span><span class="rain"></span>
@@ -844,7 +844,7 @@ function leavePeace() {
   $('#peace').hidden = true; show('hub'); render(); setStatus(idleStatus());
   const r = $('#urgentRow'); if (r) r.focus({ preventScroll: true });
 }
-$('#pBack').addEventListener('click', leavePeace);
+$('#peaceBack').addEventListener('click', leavePeace);
 
 /* the peace-o-meter: a tap reveals the joke; the bonus token can only ever land once */
 async function revealPeace(p) {
